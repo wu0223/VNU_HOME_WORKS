@@ -1,0 +1,18 @@
+def get_constellation(birthdate):
+  month=int(birthdate[0:2])
+  day=int(birthdate[2:4])
+# 輸入日期
+  dates=(21,20,21,21,22,22,23,24,24,24,23,22)
+  constellations=("摩羯座","水瓶座","雙魚座","牡羊座","金牛座","雙子座","巨蟹座","獅子座","處女座","天秤座","天蠍座","射手座")
+# 輸出星座
+  if day>dates[month-1]:
+    return constellations[month]
+  else:
+    return constellations[month-1]
+birthdate=input("請輸入出生日期(mmdd):")
+constellation=get_constellation(birthdate)
+print("您的星座為:",constellation)
+# 輸入範例:
+#    0716
+# 輸出範例:
+#    雙魚座
